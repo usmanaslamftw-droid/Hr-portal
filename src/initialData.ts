@@ -1,4 +1,4 @@
-import { Employee, AttendanceLog } from './types';
+import { Employee, AttendanceLog, LeaveRequest, ReimbursementClaim, PayrollSlip } from './types';
 
 export const INITIAL_EMPLOYEES: Employee[] = [
   {
@@ -181,3 +181,185 @@ export const INITIAL_ATTENDANCE: AttendanceLog[] = [
     status: 'Present',
   }
 ];
+
+export const INITIAL_LEAVES: LeaveRequest[] = [
+  {
+    id: 'lve-201',
+    employeeId: 'emp-104',
+    employeeName: 'Marcus Vance',
+    leaveType: 'Annual Leave',
+    startDate: '2026-05-15',
+    endDate: '2026-05-25',
+    reason: 'Family trip outside of the region.',
+    status: 'Approved',
+    appliedDate: '2026-05-01'
+  },
+  {
+    id: 'lve-202',
+    employeeId: 'emp-101',
+    employeeName: 'Sarah Connor',
+    leaveType: 'Sick Leave',
+    startDate: '2026-05-22',
+    endDate: '2026-05-23',
+    reason: 'Dental wisdom tooth extraction healing.',
+    status: 'Pending',
+    appliedDate: '2026-05-20'
+  },
+  {
+    id: 'lve-203',
+    employeeId: 'emp-103',
+    employeeName: 'Elena Rostova',
+    leaveType: 'Annual Leave',
+    startDate: '2026-06-10',
+    endDate: '2026-06-15',
+    reason: 'Summer vacation renewal.',
+    status: 'Approved',
+    appliedDate: '2026-05-18'
+  },
+  {
+    id: 'lve-204',
+    employeeId: 'emp-105',
+    employeeName: 'David Kim',
+    leaveType: 'Compassionate',
+    startDate: '2026-05-02',
+    endDate: '2026-05-04',
+    reason: 'Family emergency support.',
+    status: 'Approved',
+    appliedDate: '2026-04-30'
+  },
+  {
+    id: 'lve-205',
+    employeeId: 'emp-102',
+    employeeName: 'James Carter',
+    leaveType: 'Unpaid',
+    startDate: '2026-07-01',
+    endDate: '2026-07-05',
+    reason: 'Attending brief external tech symposium.',
+    status: 'Rejected',
+    appliedDate: '2026-05-10'
+  }
+];
+
+export const INITIAL_REIMBURSEMENTS: ReimbursementClaim[] = [
+  {
+    id: 'clm-301',
+    employeeId: 'emp-101',
+    employeeName: 'Sarah Connor',
+    claimType: 'Dental Care',
+    amount: 180,
+    claimDate: '2026-05-15',
+    description: 'Root canal treatment checkup invoice and follow-up.',
+    receiptNumber: 'REC-9912A',
+    status: 'Approved'
+  },
+  {
+    id: 'clm-302',
+    employeeId: 'emp-106',
+    employeeName: 'Sophia Patel',
+    claimType: 'Prescription',
+    amount: 45,
+    claimDate: '2026-05-19',
+    description: 'Antibiotics & anti-inflammation prescription from City Meds.',
+    receiptNumber: 'REC-2041B',
+    status: 'Pending'
+  },
+  {
+    id: 'clm-303',
+    employeeId: 'emp-103',
+    employeeName: 'Elena Rostova',
+    claimType: 'Vision Care',
+    amount: 320,
+    claimDate: '2026-05-10',
+    description: 'Prescription reading glasses frame & lens reimbursement.',
+    receiptNumber: 'REC-1152X',
+    status: 'Approved'
+  },
+  {
+    id: 'clm-304',
+    employeeId: 'emp-105',
+    employeeName: 'David Kim',
+    claimType: 'Medical Checkup',
+    amount: 90,
+    claimDate: '2026-05-01',
+    description: 'Private specialist consult clinic - non-standard provider.',
+    receiptNumber: 'REC-0812F',
+    status: 'Rejected'
+  }
+];
+
+export const INITIAL_PAYROLL: PayrollSlip[] = [
+  {
+    id: 'pay-401',
+    employeeId: 'emp-101',
+    employeeName: 'Sarah Connor',
+    department: 'Engineering',
+    role: 'Senior Software Architect',
+    payPeriod: 'May 2026',
+    baseSalary: 8500,
+    bonus: 1200,
+    allowance: 400,
+    deductions: 250,
+    netSalary: 9850,
+    status: 'Paid',
+    paymentDate: '2026-05-15'
+  },
+  {
+    id: 'pay-402',
+    employeeId: 'emp-102',
+    employeeName: 'James Carter',
+    department: 'Design',
+    role: 'Product Designer',
+    payPeriod: 'May 2026',
+    baseSalary: 6200,
+    bonus: 500,
+    allowance: 300,
+    deductions: 180,
+    netSalary: 6820,
+    status: 'Paid',
+    paymentDate: '2026-05-15'
+  },
+  {
+    id: 'pay-403',
+    employeeId: 'emp-103',
+    employeeName: 'Elena Rostova',
+    department: 'HR',
+    role: 'HR Director',
+    payPeriod: 'May 2026',
+    baseSalary: 7500,
+    bonus: 800,
+    allowance: 350,
+    deductions: 220,
+    netSalary: 8430,
+    status: 'Paid',
+    paymentDate: '2026-05-15'
+  },
+  {
+    id: 'pay-404',
+    employeeId: 'emp-105',
+    employeeName: 'David Kim',
+    department: 'Engineering',
+    role: 'Junior Engineer',
+    payPeriod: 'May 2026',
+    baseSalary: 4500,
+    bonus: 0,
+    allowance: 250,
+    deductions: 100,
+    netSalary: 4650,
+    status: 'Pending'
+  },
+  {
+    id: 'pay-405',
+    employeeId: 'emp-106',
+    department: 'Sales',
+    role: 'Account Executive',
+    employeeName: 'Sophia Patel',
+    payPeriod: 'May 2026',
+    baseSalary: 5800,
+    bonus: 1500,
+    allowance: 300,
+    deductions: 150,
+    netSalary: 7450,
+    status: 'Pending'
+  }
+];
+
