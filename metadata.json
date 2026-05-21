@@ -1,0 +1,6 @@
+{
+  "name": "HR Directory & Attendance Logger",
+  "description": "A simple HR application to manage local employee records, departments, and clock-in logs.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
